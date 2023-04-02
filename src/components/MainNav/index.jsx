@@ -12,10 +12,15 @@ function MainNav() {
       label: 'Earned NFTs',
       key: 'nft',
     },
-    {
-      label: 'Logout',
-      key: 'logout',
-    },
+    sessionStorage.getItem('email')
+      ? {
+          label: 'Logout',
+          key: 'logout',
+        }
+      : {
+          label: 'Login',
+          key: 'login',
+        },
   ];
 
   const location = useLocation();
