@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Input, Button, Typography } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 import { login } from '../../requests';
 
 const { Title } = Typography;
 
 function Login() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({});
 
   const updateData = (fieldName, val) => {
@@ -16,7 +18,7 @@ function Login() {
     const resp = await login(formData);
     if (resp) {
       sessionStorage.setItem('email', formData.email);
-      return redirect('/chat');
+      return navigate('/chat');
     }
   };
 
