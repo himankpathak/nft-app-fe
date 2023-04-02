@@ -31,7 +31,7 @@ function App() {
         className={cx('header-title logo', mainPage && 'main-page')}
         level={1}
       >
-        NFT App
+        NFT Bloom
       </Title>
       {mainPage && (
         <Space direction="vertical">
