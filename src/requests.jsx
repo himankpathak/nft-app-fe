@@ -24,7 +24,10 @@ export const login = async data => {
 };
 
 export const chatMessage = async data => {
-  const response = await instance.post('/chat', { messages: data });
+  const response = await instance.post('/chat', {
+    messages: data,
+    email: sessionStorage.getItem('email'),
+  });
   if (response.status === 200) {
     return response.data;
   } else {

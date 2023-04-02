@@ -13,7 +13,7 @@ function Chat() {
   const [messages, setMessages] = useState([
     {
       role: 'system',
-      content: 'You are a health help assistant.',
+      content: 'You are a mental health help assistant.',
     },
   ]);
 
@@ -21,7 +21,7 @@ function Chat() {
     {
       position: 'left',
       type: 'text',
-      text: 'Hey, this is your personal health assistant. How are you doing today?',
+      text: 'Hey, this is your personal mental health assistant. How are you doing today?',
       date: new Date(),
     },
   ]);

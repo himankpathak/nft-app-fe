@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 900px;
+  min-width: 460px;
 
   &.f-width {
     max-width: 460px;
@@ -38,6 +39,10 @@ body {
   display: flex;
   justify-content: center;
   background-color: unset;
+
+  .ant-menu-title-content{
+    font-weight: 600;
+  }
   .ant-menu-item {
     padding: 0 50px;
     border-radius: 10px;
@@ -139,9 +144,9 @@ $chatColorUser: #fff;
 
 .doc-image {
   height: 100px;
-  position: absolute;
-  left: 60px;
-  top: 300px;
+  position: fixed;
+  margin-left: -340px;
+  bottom: 160px;
 }
 
 .ant-spin-dot.ant-spin-dot-spin {
