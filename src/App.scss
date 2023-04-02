@@ -1,0 +1,128 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.ant-menu-dark.ant-menu-horizontal {
+  display: flex;
+  justify-content: center;
+  background-color: unset;
+  .ant-menu-item {
+    padding: 0 50px;
+    border-radius: 10px;
+  }
+  .ant-menu-item-selected {
+    background-color: #474787;
+  }
+}
+
+.input-field {
+  display: flex;
+  width: unset;
+  padding: 8px;
+  margin: 10px;
+}
+
+.header-title.ant-typography {
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+
+  &.logo {
+    font-family: 'Play', sans-serif;
+    font-size: 64px;
+    margin-bottom: 60px;
+    transition: all 800ms ease;
+  }
+  &.main-page {
+    font-size: 84px;
+    margin-bottom: 100px;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ant-btn-link {
+  color: #fff;
+}
+
+.ant-btn.ant-btn-primary {
+  margin: 6px 10px;
+  background-color: #474787;
+  &:hover,
+  &:active {
+    background-color: #706fd3;
+  }
+}
+.ant-btn.ant-input-search-button {
+  margin: unset;
+}
+
+.ant-input-group-wrapper {
+  margin: 10px auto;
+}
+
+$chatColorAdmin: #218c74;
+$chatColorUser: #fff;
+
+.message-list {
+  .rce-mbox-text {
+    color: white;
+  }
+  .rce-mbox-time {
+    color: rgb(255 255 255 / 75%);
+  }
+  .rce-input {
+  }
+  .rce-mbox {
+    background-color: $chatColorAdmin;
+  }
+  .rce-mbox-left-notch {
+    fill: $chatColorAdmin;
+  }
+  .rce-mbox.rce-mbox-right {
+    background-color: $chatColorUser;
+
+    .rce-mbox-text {
+      color: black;
+    }
+    .rce-mbox-time {
+      color: rgb(0 0 0 / 50%);
+    }
+    .rce-mbox-right-notch {
+      fill: $chatColorUser;
+    }
+  }
+}
+.doc-image {
+  height: 100px;
+  position: absolute;
+  left: 60px;
+  top: 300px;
+}
