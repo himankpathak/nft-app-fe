@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Input, Button, Typography } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 import { signup } from '../../requests';
-import { useNavigate } from 'react-router-dom';
 
 const { Title } = Typography;
 
@@ -51,7 +51,7 @@ function Signup() {
       <Input
         className="input-field"
         placeholder="Wallet Address"
-        onChange={e => updateData('address', e.target.value)}
+        onChange={e => updateData('wallet_address', e.target.value)}
         maxLength={10}
       />
       <Button type="primary" onClick={signupClick}>
