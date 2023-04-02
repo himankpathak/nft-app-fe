@@ -31,3 +31,18 @@ export const chatMessage = async data => {
     return {};
   }
 };
+
+export const fetchNFTs = async () => {
+  try {
+    const email = sessionStorage.getItem('email');
+    const response = await instance.get(`/nft/${email}`);
+
+    if (response.status === 200) {
+      return response.data || [];
+    } else {
+      return [];
+    }
+  } catch {
+    return [];
+  }
+};

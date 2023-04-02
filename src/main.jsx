@@ -6,6 +6,7 @@ import App from './App';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Chat from './components/Chat';
+import NFT from './components/NFT';
 
 import ErrorPage from './404';
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/chat',
         element: <Chat />,
+      },
+      {
+        path: '/nft',
+        element: <NFT />,
       },
     ],
   },
