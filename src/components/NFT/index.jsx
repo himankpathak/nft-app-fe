@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Grid, Row, Spin, Typography } from 'antd';
-import { fetchNFTs } from '../../requests';
+import { Col, Row, Spin, Typography } from 'antd';
 import { filter, map } from 'lodash-es';
+
+import { fetchNFTs } from '../../requests';
+import rocket from '../../assets/rocket.gif';
 
 const { Title } = Typography;
 
 function NFT() {
   const [nftList, setNftList] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const message = sessionStorage.getItem('email')
+    ? 'You have not acquired any NFTs yet!'
+    : 'You are not logged in! Please login to view your minted NFTs.';
 
   useEffect(async () => {
     setLoading(true);
@@ -30,7 +36,10 @@ function NFT() {
       {loading && <Spin size="large" />}
 
       {!nftList.length && !loading ? (
-        <>You have not acquired any NFTs yet!</>
+        <>
+          {message}
+          <img className="rocket-image" src={rocket} />
+        </>
       ) : (
         <Row gutter={[16, 16]}>
           {map(nftList, (nft, index) => (

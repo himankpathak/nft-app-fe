@@ -40,7 +40,7 @@ body {
   justify-content: center;
   background-color: unset;
 
-  .ant-menu-title-content{
+  .ant-menu-title-content {
     font-weight: 600;
   }
   .ant-menu-item {
@@ -147,6 +147,13 @@ $chatColorUser: #fff;
   position: fixed;
   margin-left: -340px;
   bottom: 160px;
+}
+
+.rocket-image {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  padding-top: 12px;
 }
 
 .ant-spin-dot.ant-spin-dot-spin {

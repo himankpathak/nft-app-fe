@@ -38,6 +38,7 @@ export const chatMessage = async data => {
 export const fetchNFTs = async () => {
   try {
     const email = sessionStorage.getItem('email');
+    if (!email) return [];
     const response = await instance.get(`/nft/${email}`);
 
     if (response.status === 200) {
