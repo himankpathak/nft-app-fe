@@ -22,7 +22,7 @@ function Signup() {
   };
 
   return (
-    <div className="container">
+    <div className="container f-width">
       <Title className="header-title" level={1}>
         Signup
       </Title>
@@ -52,7 +52,6 @@ function Signup() {
         className="input-field"
         placeholder="Wallet Address"
         onChange={e => updateData('wallet_address', e.target.value)}
-        maxLength={10}
       />
       <Button type="primary" onClick={signupClick}>
         Signup

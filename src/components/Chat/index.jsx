@@ -57,7 +57,7 @@ function Chat() {
   return (
     <>
       <img className="doc-image" src={doc} alt="loading..." />
-      <div className="container">
+      <div className="container f-width">
         <MessageList
           className="message-list"
           lockable={true}

@@ -23,7 +23,7 @@ function Login() {
   };
 
   return (
-    <div className="container">
+    <div className="container f-width">
       <Title className="header-title" level={1}>
         Login
       </Title>

@@ -27,7 +27,11 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  width: 460px;
+  max-width: 900px;
+
+  &.f-width {
+    max-width: 460px;
+  }
 }
 
 .ant-menu-dark.ant-menu-horizontal {
