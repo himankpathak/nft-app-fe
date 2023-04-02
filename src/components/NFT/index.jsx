@@ -27,7 +27,6 @@ function NFT() {
     setNftList(nftList => filter(nftList, (nft, i) => index !== i));
   };
 
-  console.log(nftList);
   return (
     <div className="container">
       <Title className="header-title" level={1}>
@@ -43,7 +42,11 @@ function NFT() {
       ) : (
         <Row gutter={[16, 16]}>
           {map(nftList, (nft, index) => (
-            <Col className="nft-container" key={`${nft[0]}${index}`} span={8}>
+            <Col
+              className="nft-container"
+              key={`${nft[0]}${index}`}
+              span={nftList.length > 2 ? 8 : 12}
+            >
               <img src={nft[1]} onError={() => onImageError(index)} />
             </Col>
           ))}
